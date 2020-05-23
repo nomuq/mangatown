@@ -22,7 +22,7 @@ func (m *Mangatown) Latest() ([]string, error) {
 
 	for _, chapter := range chapters {
 		if chapter.Attrs()["class"] == "" {
-			url := "https://www.mangatown.com/" + chapter.Attrs()["href"]
+			url := "https://www.mangatown.com" + chapter.Attrs()["href"]
 			if IsURLValid(url) {
 				links = append(links, url)
 			}
